@@ -1,0 +1,15 @@
+---
+layout: post
+---
+{% include nomnoml_include.html %}
+
+<canvas id="cd-canvas"></canvas>
+<script>
+    var canvas = document.getElementById('cd-canvas');
+    var source = '{{page.class-diagram}}';
+    nomnoml.draw(canvas, source);
+</script>
+<div class="entry">
+    {{ content }}
+</div>
+
